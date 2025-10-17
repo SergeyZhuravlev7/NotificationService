@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: NotificationService
+  kafka:
+    bootstrap-servers:
+    enabled:
+    consumer:
+      auto-offset-reset: earliest
+notifications:
+  boot_strap_server:
+  topic: test_notifications
+  sender_email:
+  sender_password:
