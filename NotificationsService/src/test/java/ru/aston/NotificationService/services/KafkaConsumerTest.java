@@ -22,7 +22,7 @@ import static org.mockito.Mockito.verify;
 
 @SpringBootTest
 @Testcontainers
-class ListenerTest {
+class KafkaConsumerTest {
 
     @Container
     static KafkaContainer kafka = new KafkaContainer("apache/kafka:4.1.0");

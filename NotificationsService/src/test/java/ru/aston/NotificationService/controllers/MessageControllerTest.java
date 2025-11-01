@@ -5,7 +5,6 @@ import org.junit.jupiter.api.DisplayNameGeneration;
 import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,7 +18,7 @@ import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.aston.NotificationService.DTO.MessageRequest;
-import ru.aston.NotificationService.services.Listener;
+import ru.aston.NotificationService.services.KafkaConsumer;
 
 import java.util.Map;
 import java.util.stream.Stream;
@@ -40,7 +39,7 @@ class MessageControllerTest {
     @MockitoBean
     private KafkaTemplate<String, String> kafkaTemplate;
     @MockitoBean
-    private Listener kafkaListener;
+    private KafkaConsumer kafkaConsumer;
     @MockitoBean
     private JavaMailSender javaMailSender;
     private final ObjectMapper objectMapper = new ObjectMapper();

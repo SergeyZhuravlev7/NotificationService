@@ -1,11 +1,12 @@
-spring:
-  application:
-    name: NotificationService
-  kafka:
-    bootstrap-servers: localhost:9092
-notifications:
-  topic: notifications
-  sender_email: bigbrooogo@ya.ru
-  sender_password: xfbmejxxzxmtorsc
-server:
-  port: 8081
+#spring:
+#  application:
+#    name: NotificationService
+#  kafka:
+#    bootstrap-servers: localhost:9092
+#notifications:
+#  topic: notifications
+#  sender_email: bigbrooogo@ya.ru
+#  sender_password: xfbmejxxzxmtorsc
+#server:
+#  port: 8081
+
